@@ -6,7 +6,7 @@ var currentDate = new Date();
 var month = currentDate.getDate() + 1;
 var day = currentDate.getDay();
 var year = currentDate.getFullYear();
-var currentWeatherBox = ("#currentWeather");
+var currentWeatherBox = $("#currentWeather");
 
 //Button Click Variable
 var searchBtn = $("#searchBtn");
@@ -41,15 +41,15 @@ function getUVIndex(city, weatherData) {
 }
 
 function displayWeather(city, weatherData, uvData) {
-currentWeatherBox.html("").addClass("border");
+
 
  //display current city/date
 var cityHeader = $("<h2>")
-        .addClass("capital")
+        .addClass("capitalize")
         .text(city + "(" + month + "/" + day + "/" + year + ") ");
 var imgEl = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + weatherData.weather[0].icon + ".png");
 cityHeader.append(imgEl);
-currentWeatherBox.append(cityHeader);
+currentWeatherBox.append (cityHeader);
  
 //append temp
 var temperatureEl = $("<p>")
@@ -183,7 +183,7 @@ function displayCities (){
     for (var i=1; i<=cityBox.length; i++){
         var buttonEl = $("<button>")
             .attr("city-name", cityList[cityList.length-i])
-            .addClass("capital btn-info m-1 w-75")
+            .addClass("capitalize btn-info m-1 w-75")
             .text(cityList[cityList.length-i]);
 
     cityBox.append(buttonEl);
