@@ -10,18 +10,33 @@
     <title>Weather LookUp</title>
 </head>
 <body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
     
+    <main>
+        <div class="row">
+            <div class="col-3 bg-light m-2 flex-column">
+                <form class="row flex-column">
+                    <label for="cityName" class="font-weight-bold">Search For A City:</label>
+                    <div>
+                        <input type="text" id="cityName" autofocus="true">
+                        <button type="submit" class="bg-primary border-0" id="searchBtn"><span class="oi oi-magnifying-glass text-white"></span></button>
+                    </div>
+                </form>
+                <div class="row flex-column mt-1"></div>
+            </div>
+            <div class="col-8">
+                <div class="row p-3 d-flex flex-column" id="currentWeather"></div>
+                <div class="row p-3 d-flex flex-column" id="futureWeather">
+                        <h2 id="forecastHead">5 Day Forecast:</h2>
+                        <div class="row mt-2" id="daysBox"></div>
+                </div>
+            </div>
+        </div>
+    </main>  
 
-
-
-
-
-
-
-
-
-
-
+    
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="./assets/js/script.js"></script>
 </body>
