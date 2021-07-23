@@ -3,8 +3,8 @@ var apiLink = "http://api.openweathermap.org/data/2.5/weather";
 var apiKey = "df21af596a60ec7e877a04968712a9d3";
 var tempUnit = "&units=imperial";
 var currentDate = new Date();
-var month = currentDate.getDate() + 1;
-var day = currentDate.getDay();
+var month = currentDate.getMonth()+1;
+var day = currentDate.getDate();
 var year = currentDate.getFullYear();
 var currentWeatherBox = $("#currentWeather");
 
@@ -101,7 +101,7 @@ currentWeatherBox.append(uvEl);
 //5 day forecast
 
 var forecastApi = "https://api.openweathermap.org/data/2.5/onecall";
-var forecastBoxEl = $("#daysbox");
+var forecastBoxEl = $("#daysBox");
 
 function getForecast(weatherData) {
     var forecastServer = forecastApi + "?lat=" + weatherData.coord.lat + "&lon=" + weatherData.coord.lat + "&appid=" + apiKey + tempUnit + "&exclude=current,hourly";
@@ -157,7 +157,7 @@ function addDays (date, days){
     return result;
 }
 
-function buttonClickHandler(event){
+function buttonClick(event){
     event.preventDefault();
 
     var city = $("#cityName");
@@ -199,7 +199,7 @@ function cityClick(event){
 }
 
 
-searchBtn.on("click", buttonClickHandler);
+searchBtn.on("click", buttonClick);
 cityBox.on("click", cityClick);
 displayCities();
 
