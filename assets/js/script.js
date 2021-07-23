@@ -6,8 +6,35 @@ var currentDate = new Date();
 var month = currentDate.getDate()+1;
 var day = currentDate.getDay();
 var year = currentDate.getFullYear();
-var currentWeatherBox = ("#currentWeather")
-//Button Click
+var currentWeatherBox = ("#currentWeather");
+
+//Button Click Variable
+var searchBtn = $("#searchBtn");
+
+//For Storing Search History
+var cityBox = $("#cityBox");
+var cityList = JSON.parse(localStorage.getItem("city")) || [];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
