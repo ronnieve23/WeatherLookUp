@@ -15,6 +15,7 @@ var searchBtn = $("#searchBtn");
 var cityBox = $("#cityBox");
 var cityList = JSON.parse(localStorage.getItem("city")) || [];
 
+
 function currentWeather(city) {
     var serverSide = apiLink + "?q=" + city + "&appid=" + apiKey + tempUnit;
     fetch(serverSide).then(function (response) {
@@ -41,8 +42,8 @@ function getUVIndex(city, weatherData) {
 }
 
 function displayWeather(city, weatherData, uvData) {
-
-
+//clear current results
+currentWeatherBox.html("").addClass("border");
  //display current city/date
 var cityHeader = $("<h2>")
         .addClass("capitalize")
@@ -103,7 +104,7 @@ var forecastApi = "https://api.openweathermap.org/data/2.5/onecall";
 var forecastBoxEl = $("#daysbox");
 
 function getForecast(weatherData) {
-    var forecastServer = forecastApi + "?+lat=" + weatherData.coord.lat + "&lon=" + weatherData.coord.lat + "&appid=" + apiKey + tempUnit + "&exclude=current,hourly";
+    var forecastServer = forecastApi + "?lat=" + weatherData.coord.lat + "&lon=" + weatherData.coord.lat + "&appid=" + apiKey + tempUnit + "&exclude=current,hourly";
     fetch(forecastServer).then(function(response){
         if (response.ok){
             response.json().then(function(forecastData){
@@ -114,7 +115,7 @@ function getForecast(weatherData) {
 }
 
 function displayForecast(forecastData){
-    var headerEl = $("#forecastHead").attr("hidden". false);
+    var headerEl = $("#forecastHead").attr("hidden", false);
     forecastBoxEl.html("");
 
     for (var i=0; i<5; i++){
@@ -124,17 +125,17 @@ function displayForecast(forecastData){
     //append date
     var date = addDays(currentDate, i+1);
     var month = date.getMonth()+1;
-    var pEL = $("<p>")
+    var pEl = $("<p>")
         .addClass("font-weight-bold")
         .text(month + "/" + date.getDate() + "/" + date.getFullYear());
-    divEl.append(pEL);
+    divEl.append(pEl);
 
     //append weather icon
     iconImgEl = $("<img>")
-        .attr("src", "http://openweathermap.org/img/wn/" + weatherData.weather[0].icon + ".png");
+        .attr("src", "http://openweathermap.org/img/wn/" + forecastData.daily[i].weather[0].icon + ".png");
     divEl.append(iconImgEl);
 
-    //append temeprature
+    //append temperature
     var tempEl = $("<p>")
         .text("Temp: " + forecastData.daily[i].temp.day);
     var unitEl = $("<span>")
