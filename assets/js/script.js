@@ -43,7 +43,7 @@ function getUVIndex(city, weatherData) {
 
 function displayWeather(city, weatherData, uvData) {
 //clear current results
-currentWeatherBox.html("").addClass("border");
+currentWeatherBox.html("").addClass("border border-secondary");
  //display current city/date
 var cityHeader = $("<h2>")
         .addClass("capitalize")
@@ -120,7 +120,7 @@ function displayForecast(forecastData){
 
     for (var i=0; i<5; i++){
         var divEl = $("<div>")
-            .addClass("col-2 bg-primary mx-auto p-2");
+            .addClass("col-2 bg-dark text-white mx-auto p-2");
         
     //append date
     var date = addDays(currentDate, i+1);
@@ -184,7 +184,7 @@ function displayCities (){
     for (var i=1; i<=cityList.length; i++){
         var buttonEl = $("<button>")
             .attr("city-name", cityList[cityList.length-i])
-            .addClass("capitalize btn-info m-1 w-75")
+            .addClass("capitalize btn-info bg-secondary m-1 w-75")
             .text(cityList[cityList.length-i]);
 
     cityBox.append(buttonEl);
