@@ -26,3 +26,7 @@ main {
 .VeryHigh {
     background-color: rgb(255, 0, 0, 0.8);
 }
+
+.capitalize {
+    text-transform: capitalize;
+}
