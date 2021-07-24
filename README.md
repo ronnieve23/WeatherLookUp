@@ -11,7 +11,8 @@ The weather conditions displayed include the following:
 
 1. Name of City and the Date
 2. Temperature
-3. UV Index that includes changing colors depending on how high or low the index is (green for low, yellow for moderate, orange for high, red for very high).
+3. Humidity
+4. UV Index that includes changing colors depending on how high or low the index is (green for low, yellow for moderate, orange for high, red for very high).
 
 Another neat feature of the website is that it stores your past 10 city searches and you can click on them instead of typing a search again to display weather conditions for that city!
 
