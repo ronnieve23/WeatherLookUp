@@ -181,7 +181,7 @@ function saveSearch(city){
 
 function displayCities (){
     cityBox.html("");
-    for (var i=1; i<=cityBox.length; i++){
+    for (var i=1; i<=cityList.length; i++){
         var buttonEl = $("<button>")
             .attr("city-name", cityList[cityList.length-i])
             .addClass("capitalize btn-info m-1 w-75")
