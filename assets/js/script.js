@@ -56,7 +56,7 @@ currentWeatherBox.append (cityHeader);
 var temperatureEl = $("<p>")
     .text("Temperature: " + weatherData.main.temp);
 var unitEl = $("<span>")
-    .html("&#1276;F");
+    .html("&#176;F");
 temperatureEl.append(unitEl);
 currentWeatherBox.append(temperatureEl);
 
@@ -91,7 +91,7 @@ else if (uvIndex>=6 && uvIndex<8) {
 }
 
 else {
-    uvIndexEl.addClass("Very High")
+    uvIndexEl.addClass("VeryHigh")
 }
 uvEl.append(uvIndexEl);
 currentWeatherBox.append(uvEl);

@@ -10,3 +10,19 @@ header h1 {
 main {
     margin: 10px;
 }
+
+.Low {
+    background-color: rgb(127, 255, 71, 0.8);
+}
+
+.Moderate {
+    background-color: rgb(255, 255, 0, 0.8);
+}
+
+.High {
+    background-color: rgb(255, 100, 0, 0.8);
+}
+
+.VeryHigh {
+    background-color: rgb(255, 0, 0, 0.8);
+}
