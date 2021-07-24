@@ -28,12 +28,8 @@ Below are screenshots of the website. Each screenshot has a different city that 
 
 ![Website Screenshot](./assets/screenshots/Low.png)
 
-
 ![Website Screenshot](./assets/screenshots/Moderate.png)
 
-
-![Website Screenshot](./assets/screenshots/High.png)
-
+![Website Screenshot](./assets/screenshots/high.png)
 
 ![Website Screenshot](./assets/screenshots/Veryhigh.png)
-
