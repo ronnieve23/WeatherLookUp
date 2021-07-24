@@ -104,7 +104,7 @@ var forecastApi = "https://api.openweathermap.org/data/2.5/onecall";
 var forecastBoxEl = $("#daysBox");
 
 function getForecast(weatherData) {
-    var forecastServer = forecastApi + "?lat=" + weatherData.coord.lat + "&lon=" + weatherData.coord.lat + "&appid=" + apiKey + tempUnit + "&exclude=current,hourly";
+    var forecastServer = forecastApi + "?lat=" + weatherData.coord.lat + "&lon=" + weatherData.coord.lon + "&appid=" + apiKey + tempUnit + "&exclude=current,hourly";
     fetch(forecastServer).then(function(response){
         if (response.ok){
             response.json().then(function(forecastData){
