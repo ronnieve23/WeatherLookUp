@@ -120,7 +120,7 @@ function displayForecast(forecastData){
 
     for (var i=0; i<5; i++){
         var divEl = $("<div>")
-            .addClass("col-2 bg-dark text-white mx-auto p-2");
+            .addClass("col-2 bg-secondary text-white mx-auto p-2");
         
     //append date
     var date = addDays(currentDate, i+1);
