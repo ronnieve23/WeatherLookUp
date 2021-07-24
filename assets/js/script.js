@@ -1,5 +1,5 @@
 //Global Variables
-var apiLink = "http://api.openweathermap.org/data/2.5/weather";
+var apiLink = "https://api.openweathermap.org/data/2.5/weather";
 var apiKey = "df21af596a60ec7e877a04968712a9d3";
 var tempUnit = "&units=imperial";
 var currentDate = new Date();
